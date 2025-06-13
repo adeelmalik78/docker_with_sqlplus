@@ -9,20 +9,23 @@ curl -o oracle-instantclient-sqlplus.zip https://download.oracle.com/otn_softwar
 #Build the docker image with sqlplus
 sudo docker build -f Dockerfile.sqlplus -t liquibase-with-sqlplus:1.0 .
 
+
+# The "--platform=linux/amd64" argument is needed if invoking docker run on a Mac
 sudo docker run \
   --rm \
   --env LIQUIBASE_LICENSE_KEY=$LIQUIBASE_PRO_LICENSE_KEY \
   --env LIQUIBASE_SQLPLUS_PATH=/opt/oracle/instantclient_23_8/sqlplus \
-  --env LIQUIBASE_LOG_LEVEL=FINE \
+  --env LIQUIBASE_LOG_LEVEL=INFO \
   -v ${PWD}/changelog:/liquibase/changelog \
   liquibase-with-sqlplus:1.0 \
   --version
 
+# The "--platform=linux/amd64" argument is needed if invoking docker run on a Mac
 sudo docker run \
   --rm \
   --env LIQUIBASE_LICENSE_KEY=$LIQUIBASE_PRO_LICENSE_KEY \
   --env LIQUIBASE_SQLPLUS_PATH=/opt/oracle/instantclient_23_8/sqlplus \
-  --env LIQUIBASE_LOG_LEVEL=FINE \
+  --env LIQUIBASE_LOG_LEVEL=INFO \
   -v ${PWD}/changelog:/liquibase/changelog \
   liquibase-with-sqlplus:1.0 \
   --url=jdbc:oracle:thin:@cs-oracledb.liquibase.net:1521/PP_DEV \

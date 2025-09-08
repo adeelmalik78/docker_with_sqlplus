@@ -1,5 +1,5 @@
 cat > test_connect.sql << 'EOF' 
-connect username/"adeel#malik"@connection_string
+connect adeel/"adeel#malik"@connection_string
 show user 
 exit 
 EOF

@@ -63,4 +63,4 @@ sudo docker run \
 sudo docker run -it \
   --rm \
   liquibase-with-sqlplus:1.0 \
-  sh test_sqlplus.sh
+  sh ./test_sqlplus.sh

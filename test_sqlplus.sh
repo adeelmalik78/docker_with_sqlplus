@@ -1,5 +1,5 @@
 cat > test_connect.sql << 'EOF' 
-connect ADEEL/"ADEEL#MALIK"@ccs-oracledb.liquibase.net:1521/PP_DEV
+connect ADEEL/"ADEEL#MALIK"@cs-oracledb.liquibase.net:1521/PP_DEV
 show user 
 exit 
 EOF

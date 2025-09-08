@@ -59,3 +59,8 @@ sudo docker run \
 #   liquibase-with-sqlplus:1.0 \
 #   sh -c "ls -alh /opt/oracle/instantclient_23_8/network/admin"
 
+
+sudo docker run -it \
+  --rm \
+  liquibase-with-sqlplus:1.0 \
+  sh test_sqlplus.sh

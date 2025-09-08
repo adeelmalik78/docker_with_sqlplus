@@ -63,4 +63,7 @@ sudo docker run \
 sudo docker run -it \
   --rm \
   liquibase-with-sqlplus:1.0 \
-  sh ./test_sqlplus.sh
+  sh test_sqlplus.sh
+
+sqlplus
+connect ADEEL/ADEEL#MALIK@cs-oracledb.liquibase.net:1521/PP_DEV

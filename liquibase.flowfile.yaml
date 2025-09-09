@@ -1,0 +1,30 @@
+globalVariables:
+
+stages:
+  Status:
+    actions:
+    - type: liquibase
+      command: validate
+
+    - type: liquibase
+      command: status
+      cmdArgs: {labels: "$LABELS"}
+
+
+  # Policy_Checks:
+  #   actions:
+  #   - type: liquibase
+  #     command: checks run
+
+  Update:
+    actions:
+    - type: liquibase
+      # if: "${LBCOMMAND} == update"
+      command: update
+      cmdArgs: {labels: "$LABELS"}
+
+
+endStage:
+  actions:
+  - type: liquibase
+    command: history

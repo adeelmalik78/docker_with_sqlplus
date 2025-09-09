@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y install unzip libaio1 libaio-dev && rm -rf /var
 RUN mkdir /opt/oracle
 # You must already have the sqlplus archives downloaded from Oracle
 COPY oracle-instantclient-sqlplus.zip instantclient-basic-linux.zip ./
-COPY test_sqlplus.sh liquibase.flowfile.yaml ./ 
+COPY liquibase.flowfile.yaml liquibase.sqlplus.conf ./ 
 
 RUN sh -c 'unzip -oq "*.zip" -d /opt/oracle/' 
 RUN rm *.zip

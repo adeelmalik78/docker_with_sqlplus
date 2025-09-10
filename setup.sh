@@ -47,6 +47,20 @@ sudo docker run \
 #   status
 
 
+sudo docker run \
+  --rm \
+  --env LIQUIBASE_LICENSE_KEY=$LIQUIBASE_PRO_LICENSE_KEY \
+  --env LIQUIBASE_SQLPLUS_PATH=/opt/oracle/instantclient_23_8/sqlplus \
+  --env LIQUIBASE_LOG_LEVEL=INFO \
+  --env LIQUIBASE_COMMAND_USERNAME=ADEEL \
+  --env LIQUIBASE_COMMAND_PASSWORD="ADEEL#MALIK " \
+  -v ${PWD}/changelog:/liquibase/changelog \
+  liquibase-with-sqlplus:1.0 \
+  --url=jdbc:oracle:thin:@cs-oracledb.liquibase.net:1521/PP_DEV \
+  --changeLogFile=changelog/db.changelog-master.xml \
+  flow
+
+
 # Troubleshooting commands
 
 # sudo docker run -it \

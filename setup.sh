@@ -33,6 +33,7 @@ sudo docker run \
   --password=liquibase_user \
   status
 
+
 # sudo docker run \
 #   --rm \
 #   --env LIQUIBASE_LICENSE_KEY=$LIQUIBASE_PRO_LICENSE_KEY \

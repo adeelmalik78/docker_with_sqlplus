@@ -1,0 +1,11 @@
+{
+  "configuration": {
+    "liquibase.reports": {},
+    "liquibase.analytics": {
+      "enabled": false
+    }
+  },
+  "liquibase.flowfile.yaml": {
+    "liquibase.flowfile.yaml": "/Users/adeelmalik/Desktop/LiquibaseHub/docker_with_sqlplus/liquibase.flowfile.yaml"
+  }
+}

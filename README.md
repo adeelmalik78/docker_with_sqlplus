@@ -1,5 +1,5 @@
 # Liquibase Docker image with SQLPLUS
-by: Adeel
+by: Adeel Malik (Liquibase)
 
 ## Prerequisites
 Download Oracle `instantclient-basic` and `instantclient-sqlplus`.
